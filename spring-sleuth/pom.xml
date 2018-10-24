@@ -2,29 +2,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <groupId>com.baeldung</groupId>
   <artifactId>spring-sleuth</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <properties>
+    <spring-cloud-sleuth.version>2.0.0.M7</spring-cloud-sleuth.version>
+    <io.springfox-version>2.9.2</io.springfox-version>
+  </properties>
   <parent>
-    <artifactId>parent-boot-1</artifactId>
-    <groupId>com.baeldung</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../parent-boot-1</relativePath>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.0.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-sleuth</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Spring Cloud -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+      <version>${spring-cloud-sleuth.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-zipkin</artifactId>
+      <version>${spring-cloud-sleuth.version}</version>
+    </dependency>
+    <!-- SpringFox -->
     <dependency>
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger2</artifactId>
@@ -46,21 +60,18 @@
         </exclusion>
       </exclusions>
     </dependency>
-
   </dependencies>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-sleuth</artifactId>
-        <version>${spring-cloud-sleuth.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
+  <!--<dependencyManagement>-->
+    <!--<dependencies>-->
+      <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-sleuth</artifactId>-->
+        <!--<version>${spring-cloud-sleuth.version}</version>-->
+        <!--<type>pom</type>-->
+        <!--<scope>import</scope>-->
+      <!--</dependency>-->
+    <!--</dependencies>-->
+  <!--</dependencyManagement>-->
   <repositories>
     <repository>
       <id>spring-milestones</id>
@@ -71,11 +82,6 @@
       </snapshots>
     </repository>
   </repositories>
-
-  <properties>
-    <spring-cloud-sleuth.version>2.0.0.M7</spring-cloud-sleuth.version>
-    <io.springfox-version>2.9.2</io.springfox-version>
-  </properties>
   <build>
     <plugins>
       <plugin>

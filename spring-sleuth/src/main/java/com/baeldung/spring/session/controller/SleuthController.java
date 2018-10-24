@@ -1,6 +1,6 @@
 package com.baeldung.spring.session.controller;
 
-import com.baeldung.spring.session.SleuthService;
+import com.baeldung.spring.session.service.SleuthService;
 import java.util.concurrent.Executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
