@@ -1,5 +1,6 @@
-package com.baeldung.spring.session;
+package com.baeldung.spring.session.service;
 
+import com.baeldung.spring.session.service.SleuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;

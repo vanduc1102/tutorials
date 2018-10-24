@@ -8,7 +8,7 @@
 
 Download and run ZipKin from : https://zipkin.io/pages/quickstart.html
 
-After ZipKin started, you have ZipKin ready at default port: http://localhost:9411/zipkin/
+After ZipKin started, you have ZipKin ready at default port: [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/)
 
 ### Start the application
 
@@ -16,6 +16,6 @@ After ZipKin started, you have ZipKin ready at default port: http://localhost:94
 
 ### Try out
 
-Swagger-UI: http://localhost:8080/swagger-ui.html#/
+Swagger-UI: [http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)
 
 

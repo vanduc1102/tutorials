@@ -1,4 +1,4 @@
-package com.baeldung.spring.session;
+package com.baeldung.spring.session.service;
 
 import brave.Span;
 import brave.Tracer;
