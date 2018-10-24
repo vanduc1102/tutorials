@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <properties>
-    <spring-cloud-sleuth.version>2.0.0.M7</spring-cloud-sleuth.version>
+    <spring-cloud.version>2.0.0.M7</spring-cloud.version>
     <io.springfox-version>2.9.2</io.springfox-version>
   </properties>
   <parent>
@@ -31,12 +31,12 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
-      <version>${spring-cloud-sleuth.version}</version>
+      <version>${spring-cloud.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-zipkin</artifactId>
-      <version>${spring-cloud-sleuth.version}</version>
+      <version>${spring-cloud.version}</version>
     </dependency>
     <!-- SpringFox -->
     <dependency>
